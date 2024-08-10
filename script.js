@@ -49,10 +49,3 @@ let searchButton = document.querySelector("#search-button")
 searchButton.addEventListener("click", searchCity)
 
 
-// function date(){
-//   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
-//   let day = days[now.days()]
-
-//   let hour = now.gethours()
-//   let minute = now.getminutes()
-// }
