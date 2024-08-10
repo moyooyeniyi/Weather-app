@@ -1,5 +1,31 @@
 function displayWeather(response){
 console.log(response.data)
+  let numberNew = document.querySelector("#number")
+  numberNew = Math.round(response.data.temperature.current)
+  number.innerHTML = `🌤${numberNew}`
+
+let humidity = response.data.temperature.humidity
+
+let windSpeed = response.data.wind.speed
+
+
+let humidityWind = document.querySelector("#humidity-wind")
+
+humidityWind.innerHTML = `Humidity:${humidity}% Wind:${windSpeed}`
+
+let now = new Date()
+let date = now.getDate()
+let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
+  let day = days[now.getDay()]
+
+  let hour = now.getHours()
+  let minute = now.getMinutes()
+
+  let conditionDescription = response.data.condition.description
+
+  let dayCondition = document.querySelector("#condition-day")
+
+  dayCondition.innerHTML = `${day} ${hour}:${minute}, ${conditionDescription}`
 }
 function searchCity(event){
   event.preventDefault()
@@ -13,10 +39,20 @@ function searchCity(event){
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`
 
 axios.get(apiUrl).then(displayWeather)
-  
+ 
+
+
 }
 
 let searchButton = document.querySelector("#search-button")
 
 searchButton.addEventListener("click", searchCity)
 
+
+// function date(){
+//   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
+//   let day = days[now.days()]
+
+//   let hour = now.gethours()
+//   let minute = now.getminutes()
+// }
