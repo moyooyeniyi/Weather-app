@@ -1,0 +1,60 @@
+body{
+  background: #F6F5FA;
+}
+
+.container{
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#search-text{
+  border: none;
+  border-radius: 5px;
+  background: #F6F5FA;
+  padding: 8px;
+  width: 70%;
+
+}
+#search-button{
+  color: #ffff;
+  background: #885DF1;
+  border: 1px solid #885DF1;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+
+.number{
+  font-size: 45px;
+  font-weight: bold;
+  position: relative;
+  bottom:  100px;
+  left:  70%;
+}
+
+.degree{
+  font-weight: bold;
+  position: relative;
+  bottom:  120px;
+  left:  70%;
+
+}
+
+p{
+  color: #A9A6B3;
+  font-size: 15px;
+  line-height: 1.5
+}
+
+.colored-text{
+  color: #F65282;
+  font-weight: bold;
+  
+}
+
+footer{
+  color: #A9A6B3;
+
+}
